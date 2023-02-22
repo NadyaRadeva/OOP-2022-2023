@@ -1,0 +1,21 @@
+#include<iostream>
+
+const unsigned MAX_LENGTH = 20;
+
+struct Vegetable {
+	double weight;
+	char name[MAX_LENGTH];
+};
+
+struct Dressing {
+	double quantity;
+	char name[MAX_LENGTH];
+	char allergen[MAX_LENGTH];
+};
+
+struct Salad {
+	Vegetable veggiesList[3];
+	Dressing dress;
+	unsigned price;
+	char name[MAX_LENGTH];
+};
