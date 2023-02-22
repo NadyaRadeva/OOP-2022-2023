@@ -1,0 +1,53 @@
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+
+struct Vector3D {
+	double x, y, z;
+
+	double getVectorLength(Vector3D vec) {
+		return sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
+	}
+
+	Vector3D plus(Vector3D v) {
+		Vector3D sum;
+		sum.x = x + v.x;
+		sum.y = y + v.y;
+		sum.z = z + v.z;
+	}
+};
+
+double getScalarProduct(Vector3D first, Vector3D second) {
+	return first.x * second.x + first.y * second.y + first.z * second.z;
+}
+
+bool arePerpendicular(Vector3D first, Vector3D second) {
+	if (getScalarProduct(first, second) == 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+void v(Vector3D vec) {
+	std::cout << "X= " << vec.x << " Y= " << vec.y << " Z= " << vec.z << std::endl;
+}
+
+int main() {
+	Vector3D first{ 1,2,3 };
+	Vector3D second{ 4,5,6 };
+
+	v(first);
+	v(second);
+
+	std::cout << "Scalar product: " << getScalarProduct(first, second) << std::endl;
+  
+	std::cout << "Are they perpendicular? " << std::boolalpha << arePerpendicular(first, second) << std::endl;
+  
+  std::cout << b.getVectorLength() << std::endl;
+  
+  Vector3D c;
+  c = a.plus(b);
+  v(c);
+}
