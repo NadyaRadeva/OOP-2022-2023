@@ -38,7 +38,7 @@ Allergens: <allergen1>, <allergen2>...*/
 
 #include<iostream>
 
-const unsigned MAX_LENGTH = 20;
+const unsigned MAX_LENGTH = 21;
 
 struct Vegetable {
 	double weight;
@@ -52,7 +52,7 @@ struct Dressing {
 };
 
 struct Salad {
-	Vegetable veggiesList[3];
+	Vegetable veggies[3];
 	Dressing dress;
 	unsigned price;
 	char name[MAX_LENGTH];
