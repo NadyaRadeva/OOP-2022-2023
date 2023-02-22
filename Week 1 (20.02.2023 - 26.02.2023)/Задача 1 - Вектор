@@ -15,6 +15,10 @@ struct Vector3D {
 		sum.y = y + v.y;
 		sum.z = z + v.z;
 	}
+	
+	void v(Vector3D vec) const {
+	std::cout << "X= " << vec.x << " Y= " << vec.y << " Z= " << vec.z << std::endl;
+}
 };
 
 double getScalarProduct(Vector3D first, Vector3D second) {
@@ -28,10 +32,6 @@ bool arePerpendicular(Vector3D first, Vector3D second) {
 	else {
 		return false;
 	}
-}
-
-void v(Vector3D vec) {
-	std::cout << "X= " << vec.x << " Y= " << vec.y << " Z= " << vec.z << std::endl;
 }
 
 int main() {
@@ -48,6 +48,7 @@ int main() {
   std::cout << b.getVectorLength() << std::endl;
   
   Vector3D c;
-  c = a.plus(b);
+  c = a.plus(b); 
+  
   v(c);
 }
