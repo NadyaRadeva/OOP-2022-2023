@@ -1,0 +1,42 @@
+#include<iostream>
+
+struct  Student
+{
+	int age;
+	int grade;
+  
+  void defaultStu(Student& stu) {
+	stu.age = -1;
+	stu.grade = -1;
+  }
+  
+  /*void greet(const Student& stu) {
+	std::cout << "Hi, I am " << stu.age << " years old!";
+  }*/
+
+  void greet(Student& stu, int age) {
+	stu.age = age;
+	// stu->age=age;
+	std::cout << "Hi, I am " << stu.age << " years old!";
+  }
+
+  void goodBye(Student& stu) {
+	std::cout << "Bye, I am " << stu.age << " years old!";
+  egn=1234;
+	stu.age = -1;
+	stu.grade = -1;
+  }
+  
+private:
+  int egn;
+  int asdf;
+};
+
+int main() {
+	Student stu;
+	defaultStu(stu);
+	greet(stu, 15);
+	goodBye(stu);
+
+	//Ако във външните функции нямаме като параметър структурата, тогава stu.defaultStu();
+}
