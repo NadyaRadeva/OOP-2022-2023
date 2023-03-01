@@ -1,0 +1,111 @@
+#include<iostream>
+#include<cassert>
+
+// allocate the memory
+void allocateMemory(int*& array, size_t capacity){
+	int* array = new int[capacity];
+
+	for (int i = 0; i < capacity; i++) {
+		std::cin >> array[i];
+	}
+}
+
+/*void freeMemory(int*& array, size_t& size, size_t& capacity) {
+	for (int i = 0; i < capacity; i++) {
+		delete[] array[i];
+	}
+}*/
+
+bool resize(int*& array, size_t size, size_t& capacity) {
+	size_t newSize = capacity * 2;
+	int* newArray = new int[newSize];
+
+	capacity = newSize;
+	delete[] array;
+	array = newArray;
+
+	return array;
+}
+
+bool addElement(int*& array, size_t& size, size_t& capacity, int newElem) {
+	if (size + 1 > capacity) {
+		resize(array, size, capacity);
+		array[size++] = newElem;
+	}
+	else {
+		array[size++] = newElem;
+	}
+
+	return array;
+}
+
+bool addElement(int*& array, size_t& size, size_t& capacity, int newElem, size_t position) {
+	if (size + 1 > capacity) {
+		resize(array, size, capacity);
+		for (int i = capacity; i >= position; i--) {
+			array[i] = array[i - 1];
+
+		}
+		array[position - 1] = newElem;
+	}
+	else {
+		for (int i = capacity; i >= position; i--) {
+			array[i] = array[i - 1];
+
+		}
+		array[position - 1] = newElem;
+	}
+
+	return array;
+}
+
+void print(const int* array, size_t size, size_t capacity) {
+	for (int i = 0; i < size; i++) {
+		std::cout << array[i] + " ";
+	}
+}
+
+bool removeElement(int*& array, size_t& size, size_t& capacity, size_t position) {
+	for (int i = 0; i < size; i++) {
+		
+	}
+}
+
+int main()
+{
+	// dynamically allocated array which can be resized
+	int* array{ nullptr };
+
+	// capacity of the array
+	size_t capacity = 3;
+
+	// exact number of elements in the array
+	size_t size = 0;
+
+	allocateMemory(array, capacity);
+
+	addElement(array, size, capacity, 1);
+	addElement(array, size, capacity, 2);
+	addElement(array, size, capacity, 3);
+
+	std::cout << "The capacity of the array is " << capacity << std::endl;
+	std::cout << "The real count of the elements in the array is " << size << std::endl;
+	print(array, size, capacity);
+
+	addElement(array, size, capacity, 4, 2);
+
+	std::cout << "\nThe capacity of the array is " << capacity << std::endl;
+	std::cout << "The real count of the elements in the array is " << size << std::endl;
+	print(array, size, capacity);
+
+	removeElement(array, size, capacity, 0);
+	removeElement(array, size, capacity, 0);
+	removeElement(array, size, capacity, 0);
+
+	std::cout << "\nThe capacity of the array is " << capacity << std::endl;
+	std::cout << "The real count of the elements in the array is " << size << std::endl;
+
+	print(array, size, capacity);
+
+	//freeMemory(array, size, capacity);
+}
