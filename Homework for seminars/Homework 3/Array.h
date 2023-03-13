@@ -13,7 +13,7 @@ public:
 	bool resize(int*& array, size_t size, size_t& capacity);
 	bool addElement(int*& array, size_t& size, size_t& capacity, int newElem);
 	bool addElement(int*& array, size_t& size, size_t& capacity, int newElem, size_t position);
-	void print(const int* array, size_t size, size_t capacity);
+	void print(const int* array, size_t size, size_t capacity) const;
 	bool removeElement(int*& array, size_t& size, size_t& capacity, size_t position);
 };
 
