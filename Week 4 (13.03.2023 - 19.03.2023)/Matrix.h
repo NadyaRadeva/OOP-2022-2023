@@ -4,6 +4,9 @@
 class Matrix {
 private:
 	unsigned cols, rows;
+	
+	void initialiseMatrix(unsigned cols, unsigned rows);
+	void deleteMatrix(unsigned cols, unsigned rows, int** mtr);
 
 public:
 	Matrix(unsigned r, unsigned c);
