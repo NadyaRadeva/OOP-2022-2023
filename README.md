@@ -6,4 +6,4 @@ Projects made during the practicals for the OOP course at FMI, University of Sof
 | Седмица 1 (22.02.2023)  | Структури (записи) | [Посети](https://github.com/NadyaRadeva/OOP-2022-2023/tree/main/Week%201%20(20.02.2023%20-%2026.02.2023))  |
 | Седмица 2 (28.02.2023)  | Класове | [Посети](https://github.com/NadyaRadeva/OOP-2022-2023/tree/main/Week%202%20(27.02.2022%20-%2003.03.2023))  |
 | Седмица 3 (09.03.2023)  | Конструктор, деконструктор, copy-конструктор, оператор '=' | [Посети](https://github.com/NadyaRadeva/OOP-2022-2023/tree/main/Week%203%20(06.03.2023%20-%2012.03.2023))  |
-| Седмица 4 (14.03.2023)  | Move-конструктор + оператор, предефиниране на оператори | [Посети](https://github.com/NadyaRadeva/OOP-2022-2023/tree/main/Week%204%20(13.03.2023%20-%2019.03.2023))  |
+| Седмица 4 (14.03.2023)  | Move-конструктор + оператор, предефиниране на оператори, приятелски функции | [Посети](https://github.com/NadyaRadeva/OOP-2022-2023/tree/main/Week%204%20(13.03.2023%20-%2019.03.2023))  |
